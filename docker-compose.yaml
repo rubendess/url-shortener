@@ -1,0 +1,29 @@
+version: '3'
+
+volumes:
+  data:
+
+services:
+  mysql:
+    container_name: urlshortener-mysql
+    image: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - .docker/data/db:/var/lib/mysq
+    environment:
+      - MYSQL_USER=url_user
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=db_url_shortener
+      - MYSQL_ROOT_PASSWORD=rootpassword
+
+  app:
+    container_name: urlshortener-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: urlshortener-api:latest
+    expose:
+      - 8080
+    depends_on:
+      - mysql
