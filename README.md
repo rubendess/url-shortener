@@ -17,9 +17,7 @@ Technologies
 API
 -------------
 
--------------
-> Generate short URL
--------------
+#### Generate short URL
 
 > - POST /api/v1/short-urls
 
@@ -32,9 +30,8 @@ JSON body:
 
 
 Result: String with the hash URL to access.
+<br>
 
--------------
-> Retrieving original URL (auto redirect to the origin URL)
--------------
+#### Retrieving original URL (auto redirect to the original URL)
 
 > - GET /api/v1/short-urls/{hashURL}
