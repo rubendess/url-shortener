@@ -39,8 +39,4 @@ public class URLController {
         }
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<?> getAllURLs () {
-        return ResponseEntity.ok(urlService.getAllURLs());
-    }
 }

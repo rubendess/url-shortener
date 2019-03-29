@@ -72,7 +72,4 @@ public class URLService {
         return null;
     }
 
-    public java.util.List getAllURLs () {
-        return urlRepository.findAll();
-    }
 }
