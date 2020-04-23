@@ -15,6 +15,17 @@ Technologies
 
 
 -------------
+Variables
+-------------
+> - server.port
+> - spring.jpa.hibernate.ddl-auto
+> - spring.datasource.url
+> - spring.datasource.username
+> - spring.datasource.password
+> - url-shortener.host-redirect
+
+
+-------------
 Running the app using docker and docker-compose
 -------------
 1) Clone this repository: `git clone git@github.com:rubendess/url-shortener.git`
