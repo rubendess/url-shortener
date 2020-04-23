@@ -13,6 +13,17 @@ Technologies
 > - Junit
 > - Docker
 
+
+-------------
+Running the app using docker and docker-compose
+-------------
+1) Clone this repository: `git clone git@github.com:rubendess/url-shortener.git`
+2) Go to the project directory: `cd url-shortener`
+3) Execute the following command: `docker-compose up mysql app` or `docker-compose up`
+
+It will start the app on `localhost:8080`
+
+
 -------------
 API
 -------------
