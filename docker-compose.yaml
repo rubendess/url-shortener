@@ -23,6 +23,11 @@ services:
       - "8080:8080"
     depends_on:
       - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/db_url_shortener?createDatabaseIfNotExist=true&useTimezone=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=rootpassword
+      - URL-SHORTENER_HOST-REDIRECT=http://localhost:8080/api/v1/short-urls
 
   # myadmin:
   #   image: phpmyadmin/phpmyadmin:latest
