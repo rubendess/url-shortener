@@ -7,7 +7,7 @@ services:
   mysql:
     image: mysql
     ports:
-      - "3306:3306"
+      - 3306:3306
     volumes:
       - data:/var/lib/mysql
     environment:
@@ -20,10 +20,11 @@ services:
       dockerfile: Dockerfile
     image: urlshortener-app:latest
     ports:
-      - "8080:8080"
+      - 8080:8080
     depends_on:
       - mysql
     environment:
+      - SERVER_PORT=8080
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/db_url_shortener?createDatabaseIfNotExist=true&useTimezone=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=rootpassword
